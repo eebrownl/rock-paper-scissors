@@ -16,9 +16,9 @@ function computerThrow() {
 
 function game (playerSelection, computerSelection) {
     if ((playerSelection === 'rock' && computerSelection === 'paper')||(playerSelection === 'paper' && computerSelection ==='scissors')||(playerSelection ==="scissors" && computerSelection ==='rock')) {
-        alert('You lose');
+        alert('You lose. Better luck next time!');
     } else if (playerSelection === computerSelection) {
-        alert("It's a tie")
+        alert("It's a tie. Try again.")
     } else {alert('You win!');}
 }
 
