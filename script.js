@@ -2,30 +2,52 @@ function getRandomInt(max) {
     return Math.floor(Math.random()* max);
 }
 
-let randomInt = getRandomInt(3)
+const rockClick = document.querySelector('.rock');
+const paperClick = document.querySelector('.paper');
+const scissorClick = document.querySelector('.scissors')
+const result = document.querySelector('.result')
 
-function computerThrow() {
-    if (randomInt === 0) {
-        return 'rock';
-    } else if (randomInt ===1) {
-        return 'paper';
+rockClick.addEventListener('click', function(){
+    let randomInt = getRandomInt(3)
+    
+    if (randomInt ===0) {
+        result.style.backgroundColor = 'gray'
+        result.textContent = "It's a tie"
+    } else if (randomInt === 1) {
+        result.style.backgroundColor = 'fireBrick'
+        result.textContent = "You're a loser"
     } else {
-        return 'scissors';
+        result.style.backgroundColor = 'goldenrod'
+        result.textContent = "You win!!!"
     }
-}
+});
 
-function game (playerSelection, computerSelection) {
-    if ((playerSelection === 'rock' && computerSelection === 'paper')||(playerSelection === 'paper' && computerSelection ==='scissors')||(playerSelection ==="scissors" && computerSelection ==='rock')) {
-        alert('You lose. Better luck next time!');
-    } else if (playerSelection === computerSelection) {
-        alert("It's a tie. Try again.")
-    } else {alert('You win!');}
-}
+paperClick.addEventListener('click', function(){
+    let randomInt = getRandomInt(3)
+    
+    if (randomInt === 1) {
+        result.style.backgroundColor = 'gray'
+        result.textContent = "It's a tie"
+    } else if (randomInt === 2) {
+        result.style.backgroundColor = 'fireBrick'
+        result.textContent = "You're a loser"
+    } else {
+        result.style.backgroundColor = 'goldenrod'
+        result.textContent = "You win!!!"
+    }
+});
 
-let computerSelection = computerThrow();
-console.log(computerSelection)
-let input = prompt('Rock, paper or scissors?');
-let playerSelection = input.toLowerCase();
-console.log(playerSelection)
-
-game(playerSelection, computerSelection);
+scissorClick.addEventListener('click', function(){
+    let randomInt = getRandomInt(3)
+    
+    if (randomInt === 2) {
+        result.style.backgroundColor = 'gray'
+        result.textContent = "It's a tie"
+    } else if (randomInt === 0) {
+        result.style.backgroundColor = 'fireBrick'
+        result.textContent = "You're a loser"
+    } else {
+        result.style.backgroundColor = 'goldenrod'
+        result.textContent = "You win!!!"
+    }
+});

@@ -1,0 +1,19 @@
+button {
+    background-color: rgb(83, 180, 209);
+    font-size: 20px;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.player {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.result {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
